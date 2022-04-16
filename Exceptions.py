@@ -4,4 +4,8 @@ class ValueTooHighError(Exception):
 def test_Value(x):
     if x > 100:
         raise ValueTooHighError("value too high")
-test_Value(200)
+
+try:
+    test_Value(200)
+except ValueTooHighError as e:
+    print(e)
